@@ -270,11 +270,11 @@ public class BibliotekaGUI extends Application {
                             LocalDate dataZwrotu = dataZwrotuPicker.getValue();
 
                             Ksiazka nowaKsiazka = new Ksiazka(tytul, rokWydania, 1);
-                            autorList.forEach(nowaKsiazka::dodajAutora); // Dodaj autorów do książki
+                            autorList.forEach(nowaKsiazka::dodajAutora);
 
                             Uzytkownik dummyUzytkownik = new Uzytkownik("dummy", "dummy", "dummy");
                             Wypozyczenie wypozyczenie = new Wypozyczenie(nowaKsiazka, dummyUzytkownik, dataWypozyczenia);
-                            wypozyczenie.setDataZwrotu(dataZwrotu); // Ustaw datę zwrotu
+                            wypozyczenie.setDataZwrotu(dataZwrotu);
                             biblioteka.wypozyczanieKsiazki(wypozyczenie);
 
                             System.out.println("Dodano książkę: " + nowaKsiazka);
